@@ -20,39 +20,40 @@
             </ul>
         </nav>
     </header>
-	<section>
-<div class="container">
-  <div class="content">
-    <img src="learn5.webp" alt="Image description">
-    <div class="text">
-      <h2>Engaging Learning Experience</h2>
-      <p>Welcome to Learnorama, your go-to resource for interactive and engaging learning content.</p>
-      <button>Get Started</button>
-    </div>
-  </div>
-</div>
-</section>
 
- <section class="features">
-            <div class="feature">
-		<img src="transparency.png" width="60px">
-                <h2>Discover</h2>
-      <p>Discover the first amazing feature of Learnorama, designed to enhance your learning experience.</p>
-      <button>Learn More</button>
+    <section>
+        <div class="container">
+            <div class="content">
+                <img src="learn5.webp" alt="Image description">
+                <div class="text">
+                    <h2>Engaging Learning Experience</h2>
+                    <p>Welcome to Learnorama, your go-to resource for interactive and engaging learning content.</p>
+                    <button id="get-started-btn">Get Started</button>
+                </div>
             </div>
-            <div class="feature">
-		<img src="group.png" width="60px">
-                <h2>About us</h2>
-                <p>Explore the second innovative feature that brings interactive learning to your fingertips.</p>
-	<button>Learn More</button>
-            </div>
-            <div class="feature">
-		<img src="vehicle.png" width="60px">
-                <h2>Services</h2>
-                <p>making education more engaging and effective.</p>
-		<button>Learn More</button>
-            </div>
-        </section>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <img src="transparency.png" width="60px">
+            <h2>Discover</h2>
+            <p>Discover the first amazing feature of Learnorama, designed to enhance your learning experience.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="feature">
+            <img src="group.png" width="60px">
+            <h2>About us</h2>
+            <p>Explore the second innovative feature that brings interactive learning to your fingertips.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="feature">
+            <img src="vehicle.png" width="60px">
+            <h2>Services</h2>
+            <p>Making education more engaging and effective.</p>
+            <button>Learn More</button>
+        </div>
+    </section>
 
     <main>
         <section id="home-description">
@@ -69,8 +70,8 @@
                 </div>
             </div>
         </section>
-	
-<section id="interactive-media">
+
+        <section id="interactive-media">
             <div class="content">
                 <img src="picture43.jpg" alt="Interactive Media">
                 <div>
@@ -80,7 +81,7 @@
             </div>
         </section>
 
-	<section id="learning-communities">
+        <section id="learning-communities">
             <div class="content">
                 <img src="picture5.webp" alt="Learning Communities">
                 <div>
@@ -95,20 +96,50 @@
             <form action="/submit_feedback" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="feedback">Feedback:</label>
                 <textarea id="feedback" name="feedback" required></textarea>
-                
+
                 <input type="submit" value="Submit">
             </form>
+
+            <!-- Feedback confirmation message -->
+            <div id="form-message" style="margin-top: 10px; color: green;"></div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Learnorama</p>
     </footer>
+
+    < JavaScript Features >
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Smooth scroll to Educational Resources
+            const getStartedBtn = document.getElementById("get-started-btn");
+            const targetSection = document.getElementById("educational-resources");
+
+            if (getStartedBtn && targetSection) {
+                getStartedBtn.addEventListener("click", () => {
+                    targetSection.scrollIntoView({ behavior: "smooth" });
+                });
+            }
+
+            // Feedback form confirmation message
+            const form = document.querySelector("form");
+            const messageDiv = document.getElementById("form-message");
+
+            if (form && messageDiv) {
+                form.addEventListener("submit", (event) => {
+                    event.preventDefault(); // Prevent real form submission
+                    messageDiv.textContent = "Thanks for your feedback!";
+                    form.reset(); // Clear form fields
+                });
+            }
+        });
+    </script>
 </body>
 </html>
