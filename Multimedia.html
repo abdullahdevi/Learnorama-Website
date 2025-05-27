@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnorama - Multimedia Content</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Roboto font to the entire body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+        /* Custom styles for slideshow images */
+        .mySlides img {
+            width: 100%;
+            height: auto;
+            max-height: 450px; /* Limit height for consistency */
+            object-fit: cover;
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        /* Custom styles for video iframes to ensure aspect ratio */
+        .video-gallery iframe {
+            width: 100%;
+            aspect-ratio: 16/9; /* Maintain 16:9 aspect ratio */
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom styles for interactive content iframes */
+        .interactive-content iframe {
+            width: 100%;
+            height: 350px; /* Fixed height, adjust as needed */
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-md p-4 md:p-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="picture.png" alt="Learnorama Logo" class="h-10 w-10 object-contain">
+                <h1 class="text-2xl font-bold text-emerald-700">Learnorama</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6 text-lg font-medium">
+                    <li><a href="index.html" class="text-gray-600 hover:text-emerald-800 transition duration-300">Home</a></li>
+                    <li><a href="Multimedia.html" class="text-emerald-600 hover:text-emerald-800 transition duration-300">Multimedia</a></li>
+                    <li><a href="resources.html" class="text-gray-600 hover:text-emerald-800 transition duration-300">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-r from-emerald-600 to-blue-800 text-white py-16 md:py-24 rounded-b-xl shadow-lg mx-auto max-w-7xl mt-4 px-4 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Welcome to the Multimedia Page</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                Explore our diverse range of multimedia content to enhance your learning experience with engaging visuals and sounds.
+            </p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 mt-8">
+        <section class="multimedia-content space-y-12">
+            <div class="media-item bg-white p-8 rounded-xl shadow-md">
+                <h2 class="text-3xl font-bold text-emerald-700 mb-6 text-center">Image Gallery</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <img src="learn1.webp" alt="Image 1" class="w-full h-auto rounded-lg shadow-sm object-cover aspect-square">
+                    <img src="learn2.jpg" alt="Image 2" class="w-full h-auto rounded-lg shadow-sm object-cover aspect-square">
+                    <img src="learn3.jpg" alt="Image 3" class="w-full h-auto rounded-lg shadow-sm object-cover aspect-square">
+                    <img src="hero1.webp" alt="Image 4" class="w-full h-auto rounded-lg shadow-sm object-cover aspect-square">
+                </div>
+            </div>
+
+            <div class="media-item bg-white p-8 rounded-xl shadow-md">
+                <h2 class="text-3xl font-bold text-emerald-700 mb-6 text-center">Interactive Slideshow</h2>
+                <div class="slideshow-container relative max-w-3xl mx-auto">
+                    <div class="mySlides fade">
+                        <img src="learn1.webp" alt="Slideshow Image 1">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="learn2.jpg" alt="Slideshow Image 2">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="learn3.jpg" alt="Slideshow Image 3">
+                    </div>
+
+                    <a class="prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-0 ml-2 w-auto p-3 text-white font-bold text-2xl transition-all duration-300 hover:bg-black hover:bg-opacity-50 rounded-full select-none" onclick="plusSlides(-1)">❮</a>
+                    <a class="next cursor-pointer absolute top-1/2 -translate-y-1/2 right-0 mr-2 w-auto p-3 text-white font-bold text-2xl transition-all duration-300 hover:bg-black hover:bg-opacity-50 rounded-full select-none" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br>
+                <div style="text-align:center" class="mt-4">
+                    <span class="dot cursor-pointer h-3 w-3 bg-gray-400 rounded-full inline-block mx-1 transition-colors duration-300 hover:bg-emerald-500" onclick="currentSlide(1)"></span>
+                    <span class="dot cursor-pointer h-3 w-3 bg-gray-400 rounded-full inline-block mx-1 transition-colors duration-300 hover:bg-emerald-500" onclick="currentSlide(2)"></span>
+                    <span class="dot cursor-pointer h-3 w-3 bg-gray-400 rounded-full inline-block mx-1 transition-colors duration-300 hover:bg-emerald-500" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
+            <div class="media-item bg-white p-8 rounded-xl shadow-md">
+                <h2 class="text-3xl font-bold text-emerald-700 mb-6 text-center">Educational Videos</h2>
+                <div class="video-gallery grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <iframe src="video.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full aspect-video rounded-lg shadow-md"></iframe>
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full aspect-video rounded-lg shadow-md"></iframe>
+                </div>
+            </div>
+
+            <div class="media-item bg-white p-8 rounded-xl shadow-md">
+                <h2 class="text-3xl font-bold text-emerald-700 mb-6 text-center">Engaging Interactive Content</h2>
+                <div class="interactive-content grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.298285521799!2d144.9630576153177!3d-37.81410797975193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce1c0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1678901234567!5m2!1sen!2sau" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="w-full h-[350px] rounded-lg shadow-md"></iframe>
+                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQWJ-G6X_0F_1L6Q4z5Z7Y_0F_1L6Q4z5Z7Y_0F_1L6Q4z5Z7Y/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" class="w-full h-[350px] rounded-lg shadow-md"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 rounded-t-xl mx-auto max-w-7xl px-4 mb-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2024 Learnorama. All rights reserved.</p>
+            <p class="mt-2 opacity-80">Empowering your learning journey.</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" bg-emerald-600", ""); // Remove active class
+                dots[i].className += " bg-gray-400"; // Add inactive class
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className = dots[slideIndex - 1].className.replace(" bg-gray-400", ""); // Remove inactive class
+            dots[slideIndex - 1].className += " bg-emerald-600"; // Add active class
+        }
+    </script>
+</body>
+</html>
