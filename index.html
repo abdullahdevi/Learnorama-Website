@@ -3,119 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learnorama - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Learnorama - Empowering Your Learning Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Roboto font to the entire body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+        /* Custom image sizing for feature icons (optional, Tailwind classes are preferred) */
+        .feature img {
+            width: 60px; /* Kept original size, can be adjusted with Tailwind w-16 etc. */
+            height: 60px;
+            object-fit: contain;
+            margin: 0 auto 1rem; /* Center and add space */
+        }
+        /* Custom styles for content images to ensure responsiveness within flex */
+        .section-image {
+            width: 100%;
+            height: 250px; /* Fixed height for consistency, adjust as needed */
+            object-fit: cover; /* Cover the area */
+            border-radius: 0.5rem; /* Rounded corners */
+        }
+
+        /* Adjust image size for larger screens within content sections */
+        @media (min-width: 768px) {
+            .md\\:w-1\\/2 .section-image {
+                width: 100%;
+                height: 350px; /* Taller on desktop */
+            }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="logo-container">
-            <img src="picture.png" alt="Learnorama Logo" class="logo">
-            <h1>Learnorama</h1>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-md p-4 md:p-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="picture.png" alt="Learnorama Logo" class="h-10 w-10 object-contain">
+                <h1 class="text-2xl font-bold text-emerald-700">Learnorama</h1> </div>
+            <nav>
+                <ul class="flex space-x-6 text-lg font-medium">
+                    <li><a href="index.html" class="text-emerald-600 hover:text-emerald-800 transition duration-300">Home</a></li> <li><a href="Multimedia.html" class="text-gray-600 hover:text-emerald-800 transition duration-300">Multimedia</a></li> <li><a href="resources.html" class="text-gray-600 hover:text-emerald-800 transition duration-300">Resources</a></li> </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Multimedia.html">Multimedia</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section>
-        <div class="container">
-            <div class="content">
-                <img src="learn5.webp" alt="Image description">
-                <div class="text">
-                    <h2>Engaging Learning Experience</h2>
-                    <p>Welcome to Learnorama, your go-to resource for interactive and engaging learning content.</p>
-                    <button id="get-started-btn">Get Started</button>
-                </div>
+    <section class="bg-gradient-to-r from-emerald-600 to-blue-800 text-white py-16 md:py-24 rounded-b-xl shadow-lg mx-auto max-w-7xl mt-4 px-4"> <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="md:w-1/2 order-2 md:order-1 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Engaging Learning Experience</h2>
+                <p class="text-lg md:text-xl mb-8 opacity-90">Welcome to Learnorama, your go-to resource for interactive and engaging learning content that sparks curiosity and understanding.</p>
+                <button id="get-started-btn" class="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-emerald-100 transition duration-300 transform hover:scale-105"> Get Started
+                </button>
+            </div>
+            <div class="md:w-1/2 order-1 md:order-2">
+                <img src="learn5.webp" alt="Learning through technology" class="w-full h-auto rounded-lg shadow-xl border-4 border-emerald-500"> </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white mx-auto max-w-7xl mt-8 rounded-xl shadow-md px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Why Choose Learnorama?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature p-8 rounded-xl shadow-sm hover:shadow-lg transition duration-300 transform hover:-translate-y-2 bg-gray-50">
+                    <img src="transparency.png" alt="Discover Icon">
+                    <h3 class="text-2xl font-semibold mb-3 text-emerald-700">Discover New Horizons</h3> <p class="text-gray-600">Unearth a wealth of knowledge with our diverse and expansive content library, designed to broaden your understanding.</p>
+                    <button class="mt-6 bg-emerald-500 text-white py-2 px-6 rounded-full hover:bg-emerald-600 transition duration-300">Learn More</button> </div>
+                <div class="feature p-8 rounded-xl shadow-sm hover:shadow-lg transition duration-300 transform hover:-translate-y-2 bg-gray-50">
+                    <img src="group.png" alt="About Us Icon">
+                    <h3 class="text-2xl font-semibold mb-3 text-emerald-700">Community & Collaboration</h3> <p class="text-gray-600">Connect with a thriving community of learners, share insights, and collaborate on projects that foster growth.</p>
+                    <button class="mt-6 bg-emerald-500 text-white py-2 px-6 rounded-full hover:bg-emerald-600 transition duration-300">Learn More</button> </div>
+                <div class="feature p-8 rounded-xl shadow-sm hover:shadow-lg transition duration-300 transform hover:-translate-y-2 bg-gray-50">
+                    <img src="vehicle.png" alt="Services Icon">
+                    <h3 class="text-2xl font-semibold mb-3 text-emerald-700">Tailored Services</h3> <p class="text-gray-600">Benefit from our personalized services, crafted to make your educational journey more engaging and highly effective.</p>
+                    <button class="mt-6 bg-emerald-500 text-white py-2 px-6 rounded-full hover:bg-emerald-600 transition duration-300">Learn More</button> </div>
             </div>
         </div>
     </section>
 
-    <section class="features">
-        <div class="feature">
-            <img src="transparency.png" width="60px">
-            <h2>Discover</h2>
-            <p>Discover the first amazing feature of Learnorama, designed to enhance your learning experience.</p>
-            <button>Learn More</button>
-        </div>
-        <div class="feature">
-            <img src="group.png" width="60px">
-            <h2>About us</h2>
-            <p>Explore the second innovative feature that brings interactive learning to your fingertips.</p>
-            <button>Learn More</button>
-        </div>
-        <div class="feature">
-            <img src="vehicle.png" width="60px">
-            <h2>Services</h2>
-            <p>Making education more engaging and effective.</p>
-            <button>Learn More</button>
-        </div>
-    </section>
-
-    <main>
-        <section id="home-description">
-            <h1>Welcome to Learnorama!</h1>
-            <p>Explore the world of learning through our curated content, resources, and interactive media. Whether you're looking for educational articles, engaging videos, or helpful links, we've got you covered!</p>
+    <main class="container mx-auto px-4 mt-8">
+        <section id="home-description" class="py-16 bg-white rounded-xl shadow-md text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Welcome to Learnorama!</h1>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                Explore the world of learning through our curated content, comprehensive resources, and engaging interactive media. Whether you're looking for insightful educational articles, captivating videos, or helpful links to expand your knowledge, we've got you covered!
+            </p>
         </section>
 
-        <section id="educational-resources">
-            <div class="content">
-                <img src="picture3.jpg" alt="Educational Resources">
-                <div>
-                    <h2>Educational Resources</h2>
-                    <p>Discover various educational resources tailored to various subjects and levels. Our resources are designed to support your learning journey, whether you're a student, teacher, or lifelong learner.</p>
+        <section id="educational-resources" class="py-16 bg-white rounded-xl shadow-md mb-8">
+            <div class="content flex flex-col md:flex-row items-center gap-8 px-8">
+                <div class="md:w-1/2">
+                    <img src="picture3.jpg" alt="Educational Resources" class="section-image">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-emerald-700 mb-4">Rich Educational Resources</h2> <p class="text-lg text-gray-700 leading-relaxed">
+                        Dive into a wide array of educational resources tailored to various subjects and learning levels. Our meticulously crafted materials are designed to support every step of your learning journey, whether you're a dedicated student, an inspiring teacher, or a curious lifelong learner.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="interactive-media">
-            <div class="content">
-                <img src="picture43.jpg" alt="Interactive Media">
-                <div>
-                    <h2>Interactive Media</h2>
-                    <p>Engage with interactive media that makes learning fun and effective. From simulations to interactive quizzes, our media tools are designed to enhance understanding and retention.</p>
+        <section id="interactive-media" class="py-16 bg-white rounded-xl shadow-md mb-8">
+            <div class="content flex flex-col md:flex-row-reverse items-center gap-8 px-8">
+                <div class="md:w-1/2">
+                    <img src="picture43.jpg" alt="Interactive Media" class="section-image">
+                </div>
+                <div class="md:w-1/2 text-center md:text-right">
+                    <h2 class="text-3xl font-bold text-emerald-700 mb-4">Dynamic Interactive Media</h2> <p class="text-lg text-gray-700 leading-relaxed">
+                        Immerse yourself in learning with our interactive media content that makes education not just effective, but truly enjoyable. From engaging simulations to challenging interactive quizzes, our tools are specifically designed to deepen understanding and enhance knowledge retention.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="learning-communities">
-            <div class="content">
-                <img src="picture5.webp" alt="Learning Communities">
-                <div>
-                    <h2>Learning Communities</h2>
-                    <p>Join our vibrant learning communities where you can connect with fellow learners, share knowledge, and collaborate on projects. Our forums and discussion boards are great places to start.</p>
+        <section id="learning-communities" class="py-16 bg-white rounded-xl shadow-md mb-8">
+            <div class="content flex flex-col md:flex-row items-center gap-8 px-8">
+                <div class="md:w-1/2">
+                    <img src="picture5.webp" alt="Learning Communities" class="section-image">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-emerald-700 mb-4">Vibrant Learning Communities</h2> <p class="text-lg text-gray-700 leading-relaxed">
+                        Become a part of our thriving learning communities where you can seamlessly connect with fellow learners, freely share your knowledge, and collaboratively work on exciting projects. Our dedicated forums and engaging discussion boards are the perfect starting points to expand your network and learn together.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="feedback-form">
-            <h2>We'd love to hear from you!</h2>
-            <form action="/submit_feedback" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <section id="feedback-form" class="py-16 bg-white rounded-xl shadow-md px-8 mb-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">We'd love to hear from you!</h2>
+            <form action="/submit_feedback" method="post" class="max-w-xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-lg font-medium text-gray-700 mb-2 text-left">Name:</label>
+                    <input type="text" id="name" name="name" required
+                           class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"> </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700 mb-2 text-left">Email:</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"> </div>
 
-                <label for="feedback">Feedback:</label>
-                <textarea id="feedback" name="feedback" required></textarea>
+                <div>
+                    <label for="feedback" class="block text-lg font-medium text-gray-700 mb-2 text-left">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="5" required
+                              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-y"></textarea> </div>
 
-                <input type="submit" value="Submit">
-            </form>
+                <input type="submit" value="Submit Feedback"
+                       class="bg-emerald-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-emerald-700 transition duration-300 cursor-pointer transform hover:scale-105"> </form>
 
-            <!-- Feedback confirmation message -->
-            <div id="form-message" style="margin-top: 10px; color: green;"></div>
+            <div id="form-message" class="mt-6 text-lg font-semibold text-green-600"></div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Learnorama</p>
+    <footer class="bg-gray-800 text-white py-8 rounded-t-xl mx-auto max-w-7xl px-4 mb-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2024 Learnorama. All rights reserved.</p>
+            <p class="mt-2 opacity-80">Empowering your learning journey.</p>
+        </div>
     </footer>
 
-    < JavaScript Features >
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Smooth scroll to Educational Resources
@@ -129,14 +173,17 @@
             }
 
             // Feedback form confirmation message
-            const form = document.querySelector("form");
+            const form = document.querySelector("#feedback-form form"); // Select form more specifically
             const messageDiv = document.getElementById("form-message");
 
             if (form && messageDiv) {
                 form.addEventListener("submit", (event) => {
                     event.preventDefault(); // Prevent real form submission
-                    messageDiv.textContent = "Thanks for your feedback!";
+                    messageDiv.textContent = "Thanks for your feedback! We appreciate it.";
                     form.reset(); // Clear form fields
+                    setTimeout(() => { // Clear message after a few seconds
+                        messageDiv.textContent = "";
+                    }, 5000);
                 });
             }
         });
